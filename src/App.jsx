@@ -1,4 +1,3 @@
-
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,10 +8,14 @@ import Testimonials from './components/Testimonials';
 import Careers from './components/Careers';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Preloader from './components/UI/Preloader';
 
 function App() {
   return (
     <div className="relative min-h-screen bg-slate-950 text-slate-100 selection:bg-primary-500/30 selection:text-white">
+      {/* Preloader */}
+      <Preloader />
+
       {/* Background ambient radial gradients */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary-950/20 blur-[120px] animate-pulse-slow" />
