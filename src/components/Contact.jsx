@@ -129,7 +129,7 @@ const Contact = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full rounded-xl border border-slate-850 bg-slate-950/60 p-3.5 text-sm text-white placeholder-slate-600 focus:border-primary-500/50 focus:bg-slate-950 focus:outline-none transition-all duration-300"
+                        className="w-full rounded-xl border border-slate-850 bg-slate-950/60 p-3.5 text-base sm:text-sm text-white placeholder-slate-600 focus:border-primary-500/50 focus:bg-slate-950 focus:outline-none transition-all duration-300"
                         placeholder="John Doe"
                         required
                       />
@@ -146,7 +146,7 @@ const Contact = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full rounded-xl border border-slate-850 bg-slate-950/60 p-3.5 text-sm text-white placeholder-slate-600 focus:border-primary-500/50 focus:bg-slate-950 focus:outline-none transition-all duration-300"
+                        className="w-full rounded-xl border border-slate-850 bg-slate-950/60 p-3.5 text-base sm:text-sm text-white placeholder-slate-600 focus:border-primary-500/50 focus:bg-slate-950 focus:outline-none transition-all duration-300"
                         placeholder="john@company.com"
                         required
                       />
@@ -164,7 +164,7 @@ const Contact = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-slate-850 bg-slate-950/60 p-3.5 text-sm text-white placeholder-slate-600 focus:border-primary-500/50 focus:bg-slate-950 focus:outline-none transition-all duration-300"
+                      className="w-full rounded-xl border border-slate-850 bg-slate-950/60 p-3.5 text-base sm:text-sm text-white placeholder-slate-600 focus:border-primary-500/50 focus:bg-slate-950 focus:outline-none transition-all duration-300"
                       placeholder="Acme Corp"
                     />
                   </div>
@@ -180,7 +180,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows={5}
-                      className="w-full rounded-xl border border-slate-850 bg-slate-950/60 p-3.5 text-sm text-white placeholder-slate-600 focus:border-primary-500/50 focus:bg-slate-950 focus:outline-none transition-all duration-300 resize-none"
+                      className="w-full rounded-xl border border-slate-850 bg-slate-950/60 p-3.5 text-base sm:text-sm text-white placeholder-slate-600 focus:border-primary-500/50 focus:bg-slate-950 focus:outline-none transition-all duration-300 resize-none"
                       placeholder="Outline your architectural bottlenecks, database scales, or AI deployment plans..."
                       required
                     />

@@ -170,7 +170,7 @@ const Footer = () => {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-xl border border-slate-850 bg-slate-900/50 p-3.5 pr-12 text-xs text-white placeholder-slate-600 focus:border-primary-500/50 focus:bg-slate-950 focus:outline-none transition-all duration-300"
+                    className="w-full rounded-xl border border-slate-850 bg-slate-900/50 p-3.5 pr-12 text-base sm:text-xs text-white placeholder-slate-600 focus:border-primary-500/50 focus:bg-slate-950 focus:outline-none transition-all duration-300"
                     placeholder="architect@company.com"
                   />
                   <button
