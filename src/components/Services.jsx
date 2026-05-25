@@ -1,5 +1,6 @@
 import Card from './UI/Card';
 import { Cloud, Cpu, ShieldCheck, Layers, Share2, Infinity as InfinityIcon, ArrowUpRight } from 'lucide-react';
+import ScrollReveal from './UI/ScrollReveal';
 
 const services = [
   {
@@ -59,48 +60,51 @@ const Services = () => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-semibold tracking-widest text-accent-400 uppercase">Core Expertise</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mt-2 mb-6">
-            Engineered Services for Hyper-Scale Infrastructure
-          </h2>
-          <div className="w-16 h-1 rounded-full bg-gradient-to-r from-primary-500 to-accent-400 mx-auto mb-8" />
-          <p className="text-slate-300 text-base md:text-lg">
-            We provide full-spectrum engineering capabilities, deploying highly specialized cloud, software, security, and neural infrastructures.
-          </p>
-        </div>
+        <ScrollReveal animation="fade-up">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-xs font-semibold tracking-widest text-accent-400 uppercase">Core Expertise</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mt-2 mb-6">
+              Engineered Services for Hyper-Scale Infrastructure
+            </h2>
+            <div className="w-16 h-1 rounded-full bg-gradient-to-r from-primary-500 to-accent-400 mx-auto mb-8" />
+            <p className="text-slate-300 text-base md:text-lg">
+              We provide full-spectrum engineering capabilities, deploying highly specialized cloud, software, security, and neural infrastructures.
+            </p>
+          </div>
+        </ScrollReveal>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, idx) => (
-            <Card
-              key={idx}
-              className={`flex flex-col items-start text-left group cursor-pointer transition-all duration-300 border-slate-800/60 ${service.borderColor}`}
-            >
-              {/* Icon Container */}
-              <div className="flex justify-between items-center w-full mb-6">
-                <div className={`p-3.5 rounded-xl border border-slate-800 bg-slate-950 flex items-center justify-center ${service.color} ${service.bgColor}`}>
-                  <service.icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+            <ScrollReveal key={idx} animation="fade-up" delay={(idx % 3) * 150} className="h-full">
+              <Card
+                className={`flex flex-col items-start text-left group cursor-pointer transition-all duration-300 border-slate-800/60 h-full ${service.borderColor}`}
+              >
+                {/* Icon Container */}
+                <div className="flex justify-between items-center w-full mb-6">
+                  <div className={`p-3.5 rounded-xl border border-slate-800 bg-slate-950 flex items-center justify-center ${service.color} ${service.bgColor}`}>
+                    <service.icon className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  <div className="text-slate-600 group-hover:text-white transition-colors duration-300">
+                    <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
                 </div>
-                <div className="text-slate-600 group-hover:text-white transition-colors duration-300">
-                  <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </div>
-              </div>
 
-              {/* Title & Description */}
-              <h3 className="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-primary-300 transition-colors duration-300">
-                {service.title}
-              </h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                {service.description}
-              </p>
+                {/* Title & Description */}
+                <h3 className="text-xl font-bold text-white mb-3 tracking-tight group-hover:text-primary-300 transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                  {service.description}
+                </p>
 
-              {/* Action Link */}
-              <span className="mt-auto text-xs font-bold text-slate-400 group-hover:text-white transition-colors duration-300 uppercase tracking-widest flex items-center gap-1.5">
-                Learn More
-                <span className="w-1.5 h-1.5 rounded-full bg-primary-500 group-hover:scale-150 transition-transform" />
-              </span>
-            </Card>
+                {/* Action Link */}
+                <span className="mt-auto text-xs font-bold text-slate-400 group-hover:text-white transition-colors duration-300 uppercase tracking-widest flex items-center gap-1.5">
+                  Learn More
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary-500 group-hover:scale-150 transition-transform" />
+                </span>
+              </Card>
+            </ScrollReveal>
           ))}
         </div>
       </div>

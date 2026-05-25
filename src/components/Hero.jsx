@@ -1,6 +1,7 @@
 import { ArrowRight, Play, Shield, Globe, Cpu } from 'lucide-react';
 import Button from './UI/Button';
 import LightPillar from './LightPillar';
+import ScrollReveal from './UI/ScrollReveal';
 
 const Hero = () => {
   const handleContactClick = (e) => {
@@ -62,65 +63,75 @@ const Hero = () => {
         {/* Left Typography Column */}
         <div className="lg:col-span-7 flex flex-col items-start text-left max-w-2xl mx-auto lg:mx-0">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-300 text-xs font-semibold tracking-wide uppercase mb-6 animate-fade-in shadow-inner">
-            <Cpu className="w-3.5 h-3.5" />
-            <span>Next-Gen Enterprise AI & Cloud Systems</span>
-          </div>
+          <ScrollReveal animation="fade-down" delay={100}>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-300 text-xs font-semibold tracking-wide uppercase mb-6 shadow-inner">
+              <Cpu className="w-3.5 h-3.5" />
+              <span>Next-Gen Enterprise AI & Cloud Systems</span>
+            </div>
+          </ScrollReveal>
 
           {/* Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
-            Pioneering the Future of{' '}
-            <span className="bg-gradient-to-r from-primary-400 via-indigo-300 to-accent-400 bg-clip-text text-transparent drop-shadow-md">
-              Intelligent Enterprise
-            </span>
-          </h1>
+          <ScrollReveal animation="fade-up" delay={200}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
+              Pioneering the Future of{' '}
+              <span className="bg-gradient-to-r from-primary-400 via-indigo-300 to-accent-400 bg-clip-text text-transparent drop-shadow-md">
+                Intelligent Enterprise
+              </span>
+            </h1>
+          </ScrollReveal>
 
           {/* Subheading */}
-          <p className="text-slate-300 text-base md:text-lg lg:text-xl font-normal leading-relaxed mb-8">
-            Aetheris Group engineers advanced neural architectures, scalable multi-cloud hubs, and impenetrable cybersecurity systems for modern hyper-growth enterprises worldwide.
-          </p>
+          <ScrollReveal animation="fade-up" delay={300}>
+            <p className="text-slate-300 text-base md:text-lg lg:text-xl font-normal leading-relaxed mb-8">
+              Aetheris Group engineers advanced neural architectures, scalable multi-cloud hubs, and impenetrable cybersecurity systems for modern hyper-growth enterprises worldwide.
+            </p>
+          </ScrollReveal>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <Button
-              variant="primary"
-              size="lg"
-              className="flex items-center gap-2 group cursor-pointer"
-              onClick={handleContactClick}
-            >
-              Get Started
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="flex items-center justify-center gap-2 group cursor-pointer"
-              onClick={handleServicesClick}
-            >
-              <Play className="w-4 h-4 fill-current text-slate-300 group-hover:text-white transition-colors" />
-              Explore Services
-            </Button>
-          </div>
+          <ScrollReveal animation="fade-up" delay={400}>
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <Button
+                variant="primary"
+                size="lg"
+                className="flex items-center gap-2 group cursor-pointer"
+                onClick={handleContactClick}
+              >
+                Get Started
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="flex items-center justify-center gap-2 group cursor-pointer"
+                onClick={handleServicesClick}
+              >
+                <Play className="w-4 h-4 fill-current text-slate-300 group-hover:text-white transition-colors" />
+                Explore Services
+              </Button>
+            </div>
+          </ScrollReveal>
 
           {/* Trust Indicators */}
-          <div className="mt-12 pt-8 border-t border-slate-900/60 w-full grid grid-cols-3 gap-4">
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white tracking-tight">99.99%</span>
-              <span className="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Service Uptime</span>
+          <ScrollReveal animation="fade-up" delay={500} className="w-full">
+            <div className="mt-12 pt-8 border-t border-slate-900/60 w-full grid grid-cols-3 gap-4">
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold text-white tracking-tight">99.99%</span>
+                <span className="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Service Uptime</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold text-white tracking-tight">10x</span>
+                <span className="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Average Client ROI</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold text-white tracking-tight">$50M+</span>
+                <span className="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Infrastructure Saved</span>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white tracking-tight">10x</span>
-              <span className="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Average Client ROI</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-bold text-white tracking-tight">$50M+</span>
-              <span className="text-xs text-slate-400 mt-1 uppercase tracking-wider font-semibold">Infrastructure Saved</span>
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Right Abstract Animation Column */}
-        <div className="lg:col-span-5 relative w-full aspect-square flex items-center justify-center pointer-events-none">
+        <ScrollReveal animation="scale-up" delay={300} className="lg:col-span-5 relative w-full aspect-square flex items-center justify-center pointer-events-none">
           {/* Animated Central Node Sphere */}
           <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center animate-float-slow">
             {/* Soft Radial Core Glow */}
@@ -165,7 +176,7 @@ const Hero = () => {
               <span className="text-xs font-semibold text-slate-300">Hub Online</span>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
